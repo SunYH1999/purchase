@@ -1,0 +1,20 @@
+$navColor: #06c1ae;
+
+// 箭头
+@mixin arrow($w: 10px, $c: #000, $dir: top) {
+    // 兼容行内和块
+    font-size: 0;
+    width: 0;
+    // 设置所有边
+    border: $w solid transparent;
+    // 设置特殊边
+    border-#{$dir}-color: $c;
+}
+// 清除浮动
+@mixin clearfix() {
+    &:after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+}
